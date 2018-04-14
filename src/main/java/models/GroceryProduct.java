@@ -1,13 +1,12 @@
 package models;
 
 
-import java.math.BigDecimal;
 
 public class GroceryProduct {
-    public String name;
-    public String unitOfMeasurement;
-    public int quantity;
-    public double price;
+    private String name;
+    private String unitOfMeasurement;
+    private int quantity;
+    private double price;
 
     public GroceryProduct(String name, String unitOfMeasurement, int quantity, double price) {
         this.name = name;
@@ -30,5 +29,14 @@ public class GroceryProduct {
 
     public double getPrice() {
         return price;
+    }
+
+    public void printTotalItemPrice() {
+        double totalItemCost = (getPrice() * getQuantity());
+        System.out.println(getName() + ": " + getQuantity() + " @ $" + getPrice() + " = $" + totalItemCost);
+    }
+
+    public void printName() {
+
     }
 }
