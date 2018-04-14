@@ -18,4 +18,19 @@ public class GroceryProductTest {
         assertEquals(true, groceryProduct instanceof GroceryProduct);
     }
 
+    @Test
+    public void getNameOfItemCorrectly_true() {
+        assertEquals("Tomato", groceryProduct.getName());
+    }
+
+    @Test
+    public void getUnitOfMeasurementOfItemCorrectly_true() {
+        assertEquals("Each", groceryProduct.getUnitOfMeasurement());
+    }
+
+    @Test
+    public void getQuantityOfItemCorrectly_true() {
+        assertEquals(10, groceryProduct.getQuantity());
+    }
+
 }
