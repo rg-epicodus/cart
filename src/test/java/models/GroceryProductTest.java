@@ -33,4 +33,9 @@ public class GroceryProductTest {
         assertEquals(10, groceryProduct.getQuantity());
     }
 
+    @Test
+    public void getPriceOfItemCorrectly_true() {
+        assertTrue(groceryProduct.getPrice() - 1.99 == 0);
+    }
+
 }
