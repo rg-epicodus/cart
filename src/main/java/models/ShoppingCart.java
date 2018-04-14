@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCart {
-    private ArrayList<GroceryProduct> groceryProducts;
+    private ArrayList<String> groceryProducts;
     double total;
 
     //initialize an arraylist that contains our grocery items
     public ShoppingCart() {
-        groceryProducts = new ArrayList<GroceryProduct>();
+        groceryProducts = new ArrayList<String>();
     }
 
-    public void addItems(GroceryProduct groceryProduct) {
+    public void addItems(String groceryProduct) {
         groceryProducts.add(groceryProduct);
     }
 
-    public void removeItems(GroceryProduct groceryProduct) {
+    public void removeItems(String groceryProduct) {
         groceryProducts.remove(groceryProduct);
     }
 
-    public void getTotalItemsInCart() {
-        System.out.println(groceryProducts.size());
+    public int getTotalItemsInCart() {
+        return groceryProducts.size();
     }
 
     public void getTotalPriceOfItemsInCart() {

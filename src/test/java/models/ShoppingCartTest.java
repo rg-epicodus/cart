@@ -2,11 +2,12 @@ package models;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class ShoppingCartTest {
-    private ShoppingCart shoppingCart;
+    ShoppingCart shoppingCart;
 
     @Before
     public void setUp() throws Exception {
@@ -17,5 +18,12 @@ public class ShoppingCartTest {
     public void tearDown() throws Exception {
         shoppingCart = null;
     }
+
+    @Test
+    public void addOneItemToCart() {
+        shoppingCart.addItems("Bread");
+        assertEquals(1, shoppingCart.getTotalItemsInCart());
+    }
+
 
 }

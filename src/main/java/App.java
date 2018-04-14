@@ -1,3 +1,6 @@
+import models.GroceryProduct;
+import models.ShoppingCart;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -28,7 +31,9 @@ public class App {
 
                 } else if (navChoice.equalsIgnoreCase("Add item to cart")) {
                     System.out.println("What item would you like to add to your cart?");
-                    programRunning = false;
+                    System.out.println("The choices are Bread, Tomatoes, Milk, Eggs, Brussel Sprouts, Yogurt");
+                    String foodChoice = bufferedReader.readLine().toLowerCase();
+                    ShoppingCart shoppingCart = new ShoppingCart();
 
                 } else if (navChoice.equalsIgnoreCase("Remove item from cart")) {
                     System.out.println("What item would you like to remove from your cart?");
