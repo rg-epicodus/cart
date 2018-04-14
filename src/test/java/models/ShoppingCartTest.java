@@ -25,5 +25,15 @@ public class ShoppingCartTest {
         assertEquals(1, shoppingCart.getTotalItemsInCart());
     }
 
+    @Test
+    public void addFiveItemsToCart() {
+        shoppingCart.addItems("Bread");
+        shoppingCart.addItems("Milk");
+        shoppingCart.addItems("Eggs");
+        shoppingCart.addItems("Steak");
+        shoppingCart.addItems("Butter");
+        assertEquals(5, shoppingCart.getTotalItemsInCart());
+    }
+
 
 }
