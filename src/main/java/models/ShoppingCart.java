@@ -24,6 +24,10 @@ public class ShoppingCart {
         return groceryProducts.size();
     }
 
+    public Boolean doesContain(String itemName) {
+        return groceryProducts.contains(itemName);
+    }
+
     public void getTotalPriceOfItemsInCart() {
         total = 0;
         System.out.println(total);

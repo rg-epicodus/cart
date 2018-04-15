@@ -35,5 +35,20 @@ public class ShoppingCartTest {
         assertEquals(5, shoppingCart.getTotalItemsInCart());
     }
 
+    @Test
+    public void addSameItemsToCart() {
+        shoppingCart.addItems("Bread");
+        shoppingCart.addItems("Bread");
+        shoppingCart.addItems("Bread");
+        assertEquals(3, shoppingCart.getTotalItemsInCart());
+    }
+
+    @Test
+    public void checkForItemInCart() {
+        shoppingCart.addItems("Milk");
+        assertEquals(1, shoppingCart.getTotalItemsInCart());
+        assertEquals(true, shoppingCart.doesContain("Milk"));
+
+    }
 
 }
