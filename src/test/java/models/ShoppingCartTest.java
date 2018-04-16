@@ -54,11 +54,24 @@ public class ShoppingCartTest {
     }
 
     @Test
-    public void doesPriceMatchItemsInCart() {
+    public void doesPriceMatchItemInCart() {
         shoppingCart.addItem("Bread");
         System.out.println(shoppingCart.getItemsInCart());
         System.out.println(shoppingCart.checkout());
         assertEquals(true, shoppingCart.checkout().equals(4.99));
+    }
+
+    @Test
+    public void doesPriceMatchAllItemsInCart() {
+        shoppingCart.addItem("Bread");
+        shoppingCart.addItem("Brussel Sprouts");
+        shoppingCart.addItem("Milk");
+        shoppingCart.addItem("Eggs");
+        shoppingCart.addItem("Tomato");
+        shoppingCart.addItem("Yogurt");
+        System.out.println(shoppingCart.getItemsInCart());
+        System.out.println(shoppingCart.checkout());
+        assertEquals(true, shoppingCart.checkout().equals(19.65));
     }
 
 
