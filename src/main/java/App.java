@@ -9,9 +9,11 @@ public class App {
     public static void main(String[] args) {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         boolean programRunning = true;
+        ShoppingCart shoppingCart = new ShoppingCart();
 
         try {
             while (programRunning) {
+
                 System.out.println("Welcome to the Grocery Store");
                 System.out.println("Please select from the following options:");
                 System.out.println("*****************************************");
@@ -27,13 +29,18 @@ public class App {
                 String navChoice = bufferedReader.readLine();
                 if (navChoice.equalsIgnoreCase("View Cart")) {
                     System.out.println("Viewing Cart");
-                    programRunning = false;
+                    System.out.println("Your cart currently has " + shoppingCart.getTotalItemsInCart() + " items in the cart");
+
 
                 } else if (navChoice.equalsIgnoreCase("Add item to cart")) {
                     System.out.println("What item would you like to add to your cart?");
-                    System.out.println("The choices are Bread, Tomatoes, Milk, Eggs, Brussel Sprouts, Yogurt");
+                    System.out.println("The choices are Bread, Tomato, Milk, Eggs, Brussel Sprouts, Yogurt");
                     String foodChoice = bufferedReader.readLine().toLowerCase();
-                    ShoppingCart shoppingCart = new ShoppingCart();
+                    System.out.println("How many of " + foodChoice + " do you want?");
+                    int foodQuantityChoice = Integer.parseInt(bufferedReader.readLine());
+                    shoppingCart.addItem(foodChoice);
+                    System.out.println("You have added " + foodQuantityChoice + " " + foodChoice + " to your cart.");
+                    System.out.println("Your cart currently has " + shoppingCart.getTotalItemsInCart()*foodQuantityChoice + " items.");
 
                 } else if (navChoice.equalsIgnoreCase("Remove item from cart")) {
                     System.out.println("What item would you like to remove from your cart?");
