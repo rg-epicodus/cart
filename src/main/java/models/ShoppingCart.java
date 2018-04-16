@@ -16,8 +16,8 @@ public class ShoppingCart {
         groceryProducts.add(groceryProduct);
     }
 
-    public void removeItems(String groceryProduct) {
-        groceryProducts.remove(groceryProduct);
+    public void removeAllItems() {
+        groceryProducts.remove(groceryProducts);
     }
 
     public List<String> getItemsInCart() {

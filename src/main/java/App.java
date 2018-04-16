@@ -41,6 +41,8 @@ public class App {
                     shoppingCart.addItem(foodChoice);
                     System.out.println("You have added " + foodQuantityChoice + " " + foodChoice + " to your cart.");
                     System.out.println("Your cart currently has " + shoppingCart.getTotalItemsInCart()*foodQuantityChoice + " items.");
+                    System.out.println(shoppingCart.getItemsInCart());
+                    System.out.println("Your cart total is: " + shoppingCart.checkout());
 
                 } else if (navChoice.equalsIgnoreCase("Remove item from cart")) {
                     System.out.println("What item would you like to remove from your cart?");
@@ -56,7 +58,13 @@ public class App {
 
                 } else if (navChoice.equalsIgnoreCase("Remove all items from cart")) {
                     System.out.println("Removing all items from cart, are you sure? (y / n)");
-                    programRunning = false;
+                    String removeAllItems = bufferedReader.readLine().toLowerCase();
+                    if (removeAllItems == "y") {
+                        shoppingCart.removeAllItems();
+                        System.out.println("Cart now empty");
+                    } else {
+                        System.out.println("Nothing removed");
+                    }
 
                 } else if (navChoice.equalsIgnoreCase("Checkout and Pay")) {
                     System.out.println("Heading to checkout to pay, are you sure? (y / n)");
