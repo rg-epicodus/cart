@@ -10,7 +10,7 @@ public class App {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         boolean programRunning = true;
         ShoppingCart shoppingCart = new ShoppingCart();
-
+        System.out.println("shopping cart created");
         try {
             while (programRunning) {
 
@@ -30,6 +30,10 @@ public class App {
                 if (navChoice.equalsIgnoreCase("View Cart")) {
                     System.out.println("Viewing Cart");
                     System.out.println("Your cart currently has " + shoppingCart.getTotalItemsInCart() + " items in the cart");
+                    System.out.println("The items in your cart are: " + shoppingCart.getItemsInCart());
+                    System.out.println("The total of the items in your cart is: ");
+                    System.out.printf("%n$%.2f", shoppingCart.checkout());
+                    System.out.println("\n" + "******************************************");
 
 
                 } else if (navChoice.equalsIgnoreCase("Add item to cart")) {
@@ -38,11 +42,10 @@ public class App {
                     String foodChoice = bufferedReader.readLine().toLowerCase();
                     System.out.println("How many of " + foodChoice + " do you want?");
                     int foodQuantityChoice = Integer.parseInt(bufferedReader.readLine());
-                    shoppingCart.addItem(foodChoice);
+                    shoppingCart.addQuantity(foodQuantityChoice, foodChoice);
                     System.out.println("You have added " + foodQuantityChoice + " " + foodChoice + " to your cart.");
-                    System.out.println("Your cart currently has " + shoppingCart.getTotalItemsInCart()*foodQuantityChoice + " items.");
+                    System.out.println("Your cart currently has " + shoppingCart.getTotalItemsInCart() + " items.");
                     System.out.println(shoppingCart.getItemsInCart());
-                    System.out.println("Your cart total is: " + shoppingCart.checkout());
 
                 } else if (navChoice.equalsIgnoreCase("Remove item from cart")) {
                     System.out.println("What item would you like to remove from your cart?");
