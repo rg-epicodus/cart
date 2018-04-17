@@ -10,7 +10,7 @@ public class App {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         boolean programRunning = true;
         ShoppingCart shoppingCart = new ShoppingCart();
-        System.out.println("shopping cart created");
+
         try {
             while (programRunning) {
 
@@ -45,7 +45,6 @@ public class App {
                     shoppingCart.addQuantity(foodQuantityChoice, foodChoice);
                     System.out.println("You have added " + foodQuantityChoice + " " + foodChoice + " to your cart.");
                     System.out.println("Your cart currently has " + shoppingCart.getTotalItemsInCart() + " items.");
-                    System.out.println(shoppingCart.getItemsInCart());
 
                 } else if (navChoice.equalsIgnoreCase("R")) {
                     System.out.println("What item would you like to remove from your cart?");

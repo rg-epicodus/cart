@@ -32,14 +32,13 @@ Table of contents
 
 | Behavior      | Example Input         | Example Output        |
 | ------------- | ------------- | ------------- |
-| display menu of available commands  |   |    |
-| allow input of 'gorcery product' in to a cart  |   |    |
-| allow listing products in cart  |  |    |
-| allow sorting in cart by name or price  |  |    |
-| allow for adding item to cart  |  |    |
-| allow for removal of item from cart  |  |    |
-| allow for clearing all items from cart  |  |    |
-| allow for checkout with a payment method with associated input  |  |    |
+| display menu of available commands  | user starts app  | menu displayed  |
+| allow input of 'grocery product' in to a cart  | user adds item to cart | You have added 5 milk to your cart   |
+| allow listing products in cart  | user selects "View cart" | Items in cart and price listed |
+| allow sorting in cart by name or price  |  | Not Yet Implemented   |
+| allow for removal of item from cart  |  | Not Yet Implemented   |
+| allow for clearing all items from cart  | user selects "remove all items from cart" | Cart Empty   |
+| allow for checkout with a payment method with associated input  |  | Not Yet Implemented   |
 
 
 ![ScreenShot](./app/src/main/assets/images/screenshot01.png)
