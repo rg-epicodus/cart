@@ -15,11 +15,31 @@ Table of contents
 
 ### Project Info
 
-  Repository for Information about GroceryStore
+  Repository for Information about GroceryStore project for Sitka Technology Group Engineering Exercise.
+
+  Requirements were as follows:
+
+  "The Grocery Store"
+  . . Non-Functional Requirements:
+  . . . *Console or terminal application in a language of your choosing.
+  . . Functional Requirements:
+  . . . *Display menu of available commands.
+  . . . *Allow input of "grocery product" into a cart.
+  . . . *Grocery products have these attributes:
+  . . . . . *Name, Unit of Measure, Quantity, Price
+  . . . *Allow listing products in cart.
+  . . . . . *This should show a subtotal per line (quantity * price)
+  . . . . . *User should be allowed to sort by Name or subtotal.
+  . . . *Support adding and removing items in cart.
+  . . . *Support clearing cart.
+  . . . *Support checkout.
+  . . . . . *Devise a way to present payment methods and input information appropriate to the selected method.
 
 ### Documentation
 
-  No documentation for this exists yet.
+  Navigating the application should be fairly straight forward.  When first run, and after each selection, the main menu will display.
+  The user will be given options to select and will then navigate to the option itself for more input.
+  Some of the options are currently not yet implemented in order to get the project minimally completed in a timely manner.
 
 ## Setup/Installation Requirements
 

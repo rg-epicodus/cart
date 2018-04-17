@@ -41,6 +41,10 @@ public class ShoppingCart {
         return groceryProducts.contains(itemName);
     }
 
+    public void analyzeCartArray() {
+
+    }
+
     public Double checkout() {
         double total = 0.00;
         for (String item : groceryProducts) {
