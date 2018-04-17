@@ -17,17 +17,17 @@ public class App {
                 System.out.println("Welcome to the Grocery Store");
                 System.out.println("Please select from the following options:");
                 System.out.println("*****************************************");
-                System.out.println("View cart");
-                System.out.println("Add item to cart");
-                System.out.println("Remove item from cart");
-                System.out.println("Sort cart by price");
-                System.out.println("Sort cart by name");
-                System.out.println("Remove all items from cart");
-                System.out.println("Checkout and Pay");
+                System.out.println("V - View cart");
+                System.out.println("A - Add item to cart");
+                System.out.println("R - Remove item from cart");
+                System.out.println("P - Sort cart by price");
+                System.out.println("N - Sort cart by name");
+                System.out.println("D - Remove all items from cart");
+                System.out.println("C - Checkout and Pay");
                 System.out.println("Exit");
 
                 String navChoice = bufferedReader.readLine();
-                if (navChoice.equalsIgnoreCase("View Cart")) {
+                if (navChoice.equalsIgnoreCase("V")) {
                     System.out.println("Viewing Cart");
                     System.out.println("Your cart currently has " + shoppingCart.getTotalItemsInCart() + " items in the cart");
                     System.out.println("The items in your cart are: " + shoppingCart.getItemsInCart());
@@ -36,7 +36,7 @@ public class App {
                     System.out.println("\n" + "******************************************");
 
 
-                } else if (navChoice.equalsIgnoreCase("Add item to cart")) {
+                } else if (navChoice.equalsIgnoreCase("A")) {
                     System.out.println("What item would you like to add to your cart?");
                     System.out.println("The choices are Bread, Tomato, Milk, Eggs, Brussel Sprouts, Yogurt");
                     String foodChoice = bufferedReader.readLine().toLowerCase();
@@ -47,29 +47,29 @@ public class App {
                     System.out.println("Your cart currently has " + shoppingCart.getTotalItemsInCart() + " items.");
                     System.out.println(shoppingCart.getItemsInCart());
 
-                } else if (navChoice.equalsIgnoreCase("Remove item from cart")) {
+                } else if (navChoice.equalsIgnoreCase("R")) {
                     System.out.println("What item would you like to remove from your cart?");
                     programRunning = false;
 
-                } else if (navChoice.equalsIgnoreCase("Sort cart by price")) {
+                } else if (navChoice.equalsIgnoreCase("P")) {
                     System.out.println("Now sorting cart by price highest to lowest:");
                     programRunning = false;
 
-                } else if (navChoice.equalsIgnoreCase("Sort cart by name")) {
+                } else if (navChoice.equalsIgnoreCase("N")) {
                     System.out.println("Now sorting cart by name, a-z");
                     programRunning = false;
 
-                } else if (navChoice.equalsIgnoreCase("Remove all items from cart")) {
+                } else if (navChoice.equalsIgnoreCase("D")) {
                     System.out.println("Removing all items from cart, are you sure? (y / n)");
                     String removeAllItems = bufferedReader.readLine().toLowerCase();
-                    if (removeAllItems == "y") {
+                    if (removeAllItems.equals("y")) {
                         shoppingCart.removeAllItems();
                         System.out.println("Cart now empty");
                     } else {
                         System.out.println("Nothing removed");
                     }
 
-                } else if (navChoice.equalsIgnoreCase("Checkout and Pay")) {
+                } else if (navChoice.equalsIgnoreCase("C")) {
                     System.out.println("Heading to checkout to pay, are you sure? (y / n)");
                     programRunning = false;
 

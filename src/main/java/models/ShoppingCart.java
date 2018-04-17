@@ -25,7 +25,7 @@ public class ShoppingCart {
     }
 
     public void removeAllItems() {
-        groceryProducts.remove(groceryProducts);
+        groceryProducts.removeAll(groceryProducts);
     }
 
     public List<String> getItemsInCart() {
