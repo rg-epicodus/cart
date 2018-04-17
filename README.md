@@ -41,8 +41,8 @@ Table of contents
 | allow for checkout with a payment method with associated input  |  | Not Yet Implemented   |
 
 
-![ScreenShot](./app/src/main/assets/images/screenshot01.png)
-![ScreenShot](./app/src/main/assets/images/screenshot02.png)
+![ScreenShot](./main/assets/images/screenshot01.png)
+![ScreenShot](./src/main/assets/images/screenshot02.png)
 ![ScreenShot](./app/src/main/assets/images/screenshot03.png)
 ![ScreenShot](./app/src/main/assets/images/screenshot04.png)
 
