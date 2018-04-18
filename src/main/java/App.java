@@ -4,6 +4,8 @@ import models.ShoppingCart;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
@@ -60,8 +62,9 @@ public class App {
                     programRunning = false;
 
                 } else if (navChoice.equalsIgnoreCase("N")) {
+                    System.out.println("The items in your cart are: " + shoppingCart.getItemsInCart());
                     System.out.println("Now sorting cart by name, a-z");
-                    programRunning = false;
+                    System.out.println("The items in your cart are: " + shoppingCart.sortAscending());
 
                 } else if (navChoice.equalsIgnoreCase("D")) {
                     System.out.println("Removing all items from cart, are you sure? (y / n)");

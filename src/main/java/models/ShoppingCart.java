@@ -49,8 +49,9 @@ public class ShoppingCart {
         return groceryProducts.contains(itemName);
     }
 
-    public void analyzeCartArray() {
-
+    public ArrayList<String> sortAscending() {
+        Collections.sort(this.groceryProducts);
+        return this.groceryProducts;
     }
 
     public Double checkout() {
