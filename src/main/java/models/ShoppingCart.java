@@ -1,9 +1,6 @@
 package models;
 
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -54,6 +51,7 @@ public class ShoppingCart {
         return this.groceryProducts;
     }
 
+
     public Double checkout() {
         double total = 0.00;
         for (String item : groceryProducts) {
@@ -71,12 +69,7 @@ public class ShoppingCart {
                 total += 4.49;
             }
         }
-            return total;
-    }
-
-    public void getTotalPriceOfItemsInCart() {
-        total = 0;
-        System.out.println(total);
+        return total;
     }
 
 }

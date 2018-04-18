@@ -20,20 +20,21 @@ Table of contents
   Requirements were as follows:
 
   "The Grocery Store"
-  Non-Functional Requirements:
-    * Console or terminal application in a language of your choosing.
-  Functional Requirements:
-    * Display menu of available commands.
-    * Allow input of "grocery product" into a cart.
-    * Grocery products have these attributes:
-        * Name, Unit of Measure, Quantity, Price
-    * Allow listing products in cart.
-        * This should show a subtotal per line (quantity * price)
-        * User should be allowed to sort by Name or subtotal.
-    * Support adding and removing items in cart.
-    * Support clearing cart.
-    * Support checkout.
-        * Devise a way to present payment methods and input information appropriate to the selected method.
+  
+  1. Non-Functional Requirements:
+  * Console or terminal application in a language of your choosing.
+  2. Functional Requirements:
+  * Display menu of available commands.
+  * Allow input of "grocery product" into a cart.
+  * Grocery products have these attributes:
+    * Name, Unit of Measure, Quantity, Price
+  * Allow listing products in cart.
+    * This should show a subtotal per line (quantity * price)
+    * User should be allowed to sort by Name or subtotal.
+  * Support adding and removing items in cart.
+  * Support clearing cart.
+  * Support checkout.
+    * Devise a way to present payment methods and input information appropriate to the selected method.
 
 ### Documentation
 
@@ -55,7 +56,7 @@ Table of contents
 | display menu of available commands  | user starts app  | menu displayed  |
 | allow input of 'grocery product' in to a cart  | user adds item to cart | You have added 5 milk to your cart   |
 | allow listing products in cart  | user selects "View cart" | Items in cart and price listed |
-| allow sorting in cart by name or price  |  | Not Yet Implemented   |
+| allow sorting in cart by name  | user sorts by name | cart items sorted a-z   |
 | allow for removal of item from cart  | user selects remove item from cart  | prompt for what items and quantity to be deleted   |
 | allow for clearing all items from cart  | user selects "remove all items from cart" | Cart Empty   |
 | allow for checkout with a payment method with associated input  |  | Not Yet Implemented   |
