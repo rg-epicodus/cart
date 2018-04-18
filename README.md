@@ -56,7 +56,7 @@ Table of contents
 | allow input of 'grocery product' in to a cart  | user adds item to cart | You have added 5 milk to your cart   |
 | allow listing products in cart  | user selects "View cart" | Items in cart and price listed |
 | allow sorting in cart by name or price  |  | Not Yet Implemented   |
-| allow for removal of item from cart  |  | Not Yet Implemented   |
+| allow for removal of item from cart  | user selects remove item from cart  | prompt for what items and quantity to be deleted   |
 | allow for clearing all items from cart  | user selects "remove all items from cart" | Cart Empty   |
 | allow for checkout with a payment method with associated input  |  | Not Yet Implemented   |
 
