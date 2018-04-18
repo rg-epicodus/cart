@@ -3,6 +3,8 @@ package models;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class ShoppingCart {
@@ -12,6 +14,12 @@ public class ShoppingCart {
     //initialize an arraylist that contains our grocery items
     public ShoppingCart() {
         groceryProducts = new ArrayList<String>();
+    }
+
+    public void removeFoodType(int removeQuantity, String groceryProduct) {
+        for (int i = 0; i < removeQuantity; i++) {
+            groceryProducts.remove(groceryProduct);
+        }
     }
 
     public void addItem(String groceryProduct) {

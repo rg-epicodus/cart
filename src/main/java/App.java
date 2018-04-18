@@ -48,7 +48,12 @@ public class App {
 
                 } else if (navChoice.equalsIgnoreCase("R")) {
                     System.out.println("What item would you like to remove from your cart?");
-                    programRunning = false;
+                    String removeFood = bufferedReader.readLine().toLowerCase();
+                    System.out.println("How many of " + removeFood + " do you want to remove from cart?");
+                    int removeQuantity = Integer.parseInt(bufferedReader.readLine());
+                    shoppingCart.removeFoodType(removeQuantity, removeFood);
+                    System.out.println("You have removed " + removeQuantity + " " + removeFood + " from your cart.");
+
 
                 } else if (navChoice.equalsIgnoreCase("P")) {
                     System.out.println("Now sorting cart by price highest to lowest:");
